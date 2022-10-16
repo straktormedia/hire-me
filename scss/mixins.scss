@@ -1,0 +1,18 @@
+@import '../scss/variables.scss';
+
+@mixin two-column-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+  }
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+  
+@mixin bold-margin-top {
+  font-family: Mulish-Bold;
+  margin-top: $gap-common;
+}

@@ -1,0 +1,38 @@
+// Extras
+
+#extras {
+  @include two-column-grid;
+  align-self: center;
+  margin-top: 5.25rem;
+  width: $content-width;
+  margin-top: 10rem;
+
+  img {
+    width: 100%;
+  }
+
+  .card-1 {
+    order: 2;
+    padding: 7rem;
+  }
+
+  .card-2 {
+    order: 3;
+    padding: 7rem;
+  }
+
+  .empty-column-1 {
+    order: 1;
+  }
+
+  .empty-column-2 {
+    order: 4;
+  }
+}
+
+// Responsive (Laptop)
+@media only screen and (max-width: 1300px) {
+  #extras {
+    width: $content-width-laptop;
+  }
+}

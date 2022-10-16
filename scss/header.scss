@@ -1,0 +1,134 @@
+// Header
+
+header {
+  padding-top: 3.5rem;
+  width: $content-width;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-art-header {
+    padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+    margin-top: -0.3rem;
+    color: $white;
+    background: $accent-2;
+    border-radius: 100%;
+  }
+
+  .logo-text {
+    font-family: Mulish-Bold;
+  }
+}
+
+.main-menu {
+  display: flex;
+  font-size: $text-small;
+  align-self: center;
+
+  .active-page {
+    font-family: Mulish-Bold;
+    color: $blue-black;
+    cursor: default;
+
+    &:hover {
+      color: $blue-black;
+    }
+  }
+
+  a {
+    font-family: Mulish-Light;
+    padding-left: 2.5rem;
+    color: $blue-black-opacity;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      color: $accent-2;
+    }
+  }
+}
+
+.menu-btn {
+  display: none;
+
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger {
+  width: 3rem;
+  height: 0.3rem;
+  background: #458ff6;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.3rem;
+  background: #458ff6;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-1rem);
+}
+.menu-btn__burger::after {
+  transform: translateY(1rem);
+}
+
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.menu-btn.open .main-menu {
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.5s;
+}
+
+// Responsive (Laptop)
+@media only screen and (max-width: 1300px) {
+  header {
+    width: $content-width-laptop;
+  }
+
+  .main-menu {
+    align-self: center;
+    flex-direction: column;
+    padding: 15rem 25rem 15rem 5rem;
+    border: solid 0.2rem aliceblue;
+    order: 2;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 3;
+    background-color: white;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    a {
+      padding: 0;
+      line-height: 5rem;
+      font-size: 2.5rem;
+    }
+  }
+
+  .menu-btn {
+    display: flex;
+    order: 2;
+    z-index: 4;
+  }
+}

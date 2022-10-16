@@ -1,0 +1,56 @@
+// Services
+
+#services {
+  @include flex-column;
+  align-items: center;
+  margin-top: 10rem;
+  background: url("./images/bg-ser-7.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  button {
+    margin-top: 5rem;
+  }
+}
+
+.services__description {
+  width: $content-width;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  justify-items: center;
+  gap: 2.25rem;
+  margin-top: 5rem;
+  width: $content-width;
+
+  & > * {
+    background-color: $white;
+    padding: 3rem;
+    border-radius: 1.25rem;
+    box-shadow: 10px 40px 50px 0px $shadow-color;
+  }
+
+  img {
+    width: 9rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+// Responsive (Laptop)
+@media only screen and (max-width: 1300px) {
+  .services-grid {
+    width: $content-width-laptop;
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .services__description {
+    width: $content-width-laptop;
+  }
+}

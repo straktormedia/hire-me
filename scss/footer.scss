@@ -1,0 +1,69 @@
+// Footer
+
+footer {
+  align-self: stretch;
+  padding-top: 7.75rem;
+  padding-bottom: 7.75rem;
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  display: flex;
+  justify-content: center;
+
+  h4 {
+    font-size: $heading-very-small;
+  }
+
+  p {
+    color: $white;
+    font-size: $text-small;
+  }
+
+  a {
+    font-family: Mulish-Light;
+    color: $white;
+    font-size: $text-small;
+    line-height: 2rem;
+  }
+}
+
+.footer-container {
+  width: $content-width;
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
+  align-content: center;
+  gap: 2rem;
+  color: $white;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: flex-start;
+
+  > * {
+    padding-bottom: 0.5rem;
+  }
+
+  > *:first-child {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.logo span {
+  font-family: Mulish-Bold;
+}
+
+.logo-art-footer {
+  margin-top: -0.3rem;
+  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+  color: $accent-2;
+  background: $white;
+  border-radius: 100%;
+}
+
+// Responsive (Laptop)
+@media only screen and (max-width: 1300px) {
+  .footer-container {
+    width: $content-width-laptop;
+  }
+}

@@ -1,0 +1,38 @@
+// Hero
+
+#hero {
+  @include two-column-grid;
+  align-self: center;
+  margin-top: 5.25rem;
+  width: $content-width;
+
+  img {
+    width: 100%;
+  }
+
+  button {
+    color: $white;
+    background: $accent-2;
+    border: none;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .card {
+    @include flex-column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+// Responsive (Laptop)
+@media only screen and (max-width: 1300px) {
+  #hero {
+    width: $content-width-laptop;
+  }
+}

@@ -1,0 +1,135 @@
+// Testimonials
+
+#testimonials {
+  @include flex-column;
+  align-self: center;
+  align-items: center;
+  margin-top: 5.25rem;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+.testimonials-container {
+  position: relative;
+  @include flex-column;
+  align-items: center;
+  margin-top: 7rem;
+  background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+  color: $white;
+  padding: 4rem;
+  border-radius: 1.5rem;
+  width: $content-width;
+  height: 20rem;
+
+  .divider {
+    background-color: white;
+  }
+}
+
+.testimonials-container__testimonial {
+  @include two-column-grid;
+  gap: 6.875rem;
+  margin-top: 4.5rem;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+
+  p {
+    color: $white;
+    font-size: 1.188rem;
+    font-family: Mulish-Light;
+  }
+}
+
+.testimonials-container__testimonial[data-active] {
+  opacity: 1;
+  transition-delay: 0ms;
+  z-index: 1;
+}
+
+.testimonials-container__author {
+  display: grid;
+  grid-template-columns: 12rem 14rem;
+
+  & > * {
+    justify-self: start;
+  }
+}
+
+.testimonials-container__author--name {
+  @include flex-column;
+  padding: 1rem;
+}
+
+.testimonial-container__author--image {
+  border: solid 0.4rem $white;
+  border-radius: 100%;
+  aspect-ratio: 1;
+  width: 9.375rem;
+}
+
+.testimonials-container__author--fullname {
+  font-family: Mulish-Bold;
+  line-height: 3rem;
+}
+
+.testimonials-container__testimonial__description {
+  padding-right: 8rem;
+}
+
+.testimonials__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.arrow-left,
+.arrow-right {
+  color: $accent-3;
+  font-size: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  cursor: pointer;
+}
+
+.dots-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 10px;
+  height: 10px;
+  background: $accent-3;
+  opacity: 0.3;
+  border-radius: 100%;
+  margin-top: 0.5rem;
+}
+
+.dot-active {
+  width: 10px;
+  height: 10px;
+  background: $accent-3;
+  opacity: 1;
+  border-radius: 100%;
+  margin-top: 0.5rem;
+}
+
+// Responsive (Laptop)
+@media only screen and (max-width: 1300px) {
+  #testimonials {
+    width: $content-width-laptop;
+  }
+
+  .testimonials-container {
+    width: $content-width-laptop;
+  }
+}
