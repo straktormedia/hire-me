@@ -15,7 +15,7 @@
 }
 
 .services__description {
-  width: $content-width;
+  max-width: $content-width;
   text-align: center;
 }
 
@@ -25,7 +25,7 @@
   justify-items: center;
   gap: 2.25rem;
   margin-top: 5rem;
-  width: $content-width;
+  max-width: $content-width;
 
   & > * {
     background-color: $white;
@@ -46,11 +46,11 @@
 // Responsive (Laptop)
 @media only screen and (max-width: 1300px) {
   .services-grid {
-    width: $content-width-laptop;
+    max-width: $content-width-laptop;
     grid-template-columns: repeat(2, 2fr);
   }
 
   .services__description {
-    width: $content-width-laptop;
+    max-width: $content-width-laptop;
   }
 }

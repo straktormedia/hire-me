@@ -20,7 +20,7 @@
   color: $white;
   padding: 4rem;
   border-radius: 1.5rem;
-  width: $content-width;
+  min-width: $content-width;
   height: 20rem;
 
   .divider {
@@ -69,7 +69,7 @@
   border: solid 0.4rem $white;
   border-radius: 100%;
   aspect-ratio: 1;
-  width: 9.375rem;
+  max-width: 9.375rem;
 }
 
 .testimonials-container__author--fullname {
@@ -125,11 +125,7 @@
 
 // Responsive (Laptop)
 @media only screen and (max-width: 1300px) {
-  #testimonials {
-    width: $content-width-laptop;
-  }
-
   .testimonials-container {
-    width: $content-width-laptop;
+    min-width: $content-width-laptop;
   }
 }

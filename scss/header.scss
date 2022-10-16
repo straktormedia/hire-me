@@ -2,7 +2,7 @@
 
 header {
   padding-top: 3.5rem;
-  width: $content-width;
+  min-width: $content-width;
   align-self: center;
   display: flex;
   justify-content: space-between;
@@ -102,7 +102,7 @@ header {
 // Responsive (Laptop)
 @media only screen and (max-width: 1300px) {
   header {
-    width: $content-width-laptop;
+    min-width: $content-width-laptop;
   }
 
   .main-menu {
